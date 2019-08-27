@@ -9,15 +9,18 @@ layout: layouts/base.njk
 </section>
 
 <section class="container">
-    <h2>Meetups - {{ collections.meetup[0].data.title }}</h2>
+    <h2>Meetups</h2>
+    <ul>
+        <li>{{ collections.meetup[0].data.title }}</li>
+        <li>{{ collections.meetup[1].data.title }}</li>
+    </ul>
 </section>
 
 <section class="container">
     <h2>WP Meetups</h2>
-
     <ul>
-        {%- for meetup in wpwebworkers.meetup -%}
-            <li>{{ meetup.title }}</li>
+        {%- for meetup in wpwebworkers.meetup  -%}
+            <li>{{ meetup.title | safe }}</li>
         {%- endfor -%}
-    </ul>
+    </ul>    
 </section>

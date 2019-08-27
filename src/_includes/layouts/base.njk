@@ -10,6 +10,8 @@
       {% include "css/style.css" %}      
       {% include "css/typography.css" %}      
       {% include "css/header.css" %}      
+      {% include "css/footer.css" %}      
+      {% include "css/forms.css" %}      
     {% endset %}
     <style>
         {{ css | cssmin | safe }}
@@ -20,7 +22,18 @@
     {% include "components/header.njk" %}
 
     <main class="main" role="main">
-            {{ content | safe }}
+
+            <div class="container">
+                <h1>{{ title }}</h1>
+
+                {% if date  %}
+                <span>{{ date | getMeetupDate }}</span>
+                {% endif %}
+            </div>
+
+            <div class="container">
+                {{ content | safe }}
+            </div>
     </main>
 
     {% include "components/footer.njk" %}
