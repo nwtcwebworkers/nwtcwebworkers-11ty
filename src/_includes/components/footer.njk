@@ -1,3 +1,9 @@
-<footer class="container">
-    <a href="/">NWTC Web Workers</a>
+<footer class="container footer">
+    <ul class="footer__list">
+        {%- for item in navFooter  -%}
+            <li class="nav-main__item">
+                <a href="{{ item.link | safe | lower }}">{{ item.title | safe | upper}}</a>
+            </li>
+        {%- endfor -%}  
+    </ul>
 </footer>

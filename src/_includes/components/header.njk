@@ -5,12 +5,11 @@
             <span hidden>NWTC Web Workers</span>
         </a>
         <ul class="nav-main__list">
+        {%- for item in navMain  -%}
             <li class="nav-main__item">
-                <a href="/meetups">MEETUPS</a>
+                <a href="{{ item.link | safe | lower }}">{{ item.title | safe | upper}}</a>
             </li>
-            <li class="nav-main__item">
-                <a href="/about">ABOUT</a>
-            </li>
+        {%- endfor -%}           
         </ul>
     </nav>    
 </header>
