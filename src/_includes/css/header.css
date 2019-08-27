@@ -1,0 +1,17 @@
+.nav-main {
+    display: flex;
+}
+
+.nav-main__list {
+    display: flex;
+    justify-items: center;
+}
+
+.nav-main__item:not(.nav-main__logo) {
+    list-style: none;
+    display: flex;
+    margin-left: 1rem;
+}
+.nav-main__item > a {
+    align-self: center;
+}

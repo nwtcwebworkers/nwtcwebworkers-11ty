@@ -1,0 +1,9 @@
+html {
+    color: #ffffff;
+    font-size: calc(1em + 0.5vw);
+    line-height: 1.5;
+    font-family: linkMacSystemFont, -apple-system, “Segoe UI”, Roboto, Helvetica, Arial, sans-serif;
+}
+a {
+    color: #ffffff;
+}

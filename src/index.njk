@@ -1,0 +1,23 @@
+---
+title: Home
+layout: layouts/base.njk
+---
+
+<section class="container">
+    <h1>Index</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi officiis soluta quam maxime eveniet assumenda, deleniti cupiditate, libero hic harum aut tenetur ex nihil ea est, delectus laborum dignissimos velit?</p>
+</section>
+
+<section class="container">
+    <h2>Meetups - {{ collections.meetup[0].data.title }}</h2>
+</section>
+
+<section class="container">
+    <h2>WP Meetups</h2>
+
+    <ul>
+        {%- for meetup in wpwebworkers.meetup -%}
+            <li>{{ meetup.title }}</li>
+        {%- endfor -%}
+    </ul>
+</section>
