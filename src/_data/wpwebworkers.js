@@ -1,7 +1,7 @@
 const fetch = require("node-fetch");
 
 module.exports = async function() {
-  console.log( "Fetching new github stargazers count…" );
+  console.log( "Fetching new Web Wokers Meetups…" );
 
   // GitHub API: https://developer.github.com/v3/repos/#get
   return fetch("https://nwtcwebworkers.com/wp-json/wp/v2/meetup")
