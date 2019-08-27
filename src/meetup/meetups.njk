@@ -1,0 +1,21 @@
+---
+title: meetups
+layout: layouts/base.njk
+pagination:
+  data: collections.meetup
+  size: 6
+  alias: meetups
+permalink: /meetup/index.html
+---
+
+<section class="container">
+{%- for meetup in meetups -%}
+     <article class="meetup__upcoming">
+          <div>
+               <h2><a href="{{ meetup.url }}">{{ meetup.data.title }}</a></h2>
+               <span>{{ meetup.data.date | getMeetupDate }}</span>
+          </div>
+          <p>{{meetup.data.excerpt}}</p>
+     </article>
+{%- endfor -%}
+</section>
